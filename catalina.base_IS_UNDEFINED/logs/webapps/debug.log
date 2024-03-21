@@ -1,0 +1,3 @@
+2024-03-14 13:40:52.125 [main] DEBUG t.l.s.util.EncryptPropertyPlaceholderConfigurer - Loading properties file from class path resource [jdbc.properties]
+2024-03-14 14:07:26.602 [main] DEBUG t.l.s.util.EncryptPropertyPlaceholderConfigurer - Loading properties file from class path resource [jdbc.properties]
+2024-03-14 14:08:17.014 [main] DEBUG t.l.s.util.EncryptPropertyPlaceholderConfigurer - Loading properties file from class path resource [jdbc.properties]
