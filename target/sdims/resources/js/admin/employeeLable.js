@@ -99,8 +99,7 @@ function getEmployeeInfoToTables(data) {
 				employeeCode).append(employeeIdCard).append(employeeMobile)
 				.append(employeeSex).append(employeeAddress).append(
 						employeeEmail).append(employeeType).append(
-						employeeUpdateTime).append(btnTd).appendTo(
-						"#table-employee");
+						employeeUpdateTime).append(btnTd).appendTo("#table-employee");
 	});
 }
 /**
