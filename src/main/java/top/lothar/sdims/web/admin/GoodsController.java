@@ -229,7 +229,7 @@ public class GoodsController {
 			//TODO 保存图片路径
 			InputStream is = new BufferedInputStream(new FileInputStream(path));
 			String dbpath = ImageUtils.getRandomFileName()+".jpg";
-			OutputStream os = new BufferedOutputStream(new FileOutputStream("D:\\IDEA\\IDEAWorkSpace\\SDIMS\\src\\main\\webapp\\resources\\images\\"+dbpath)) ;
+			OutputStream os = new BufferedOutputStream(new FileOutputStream("D:\\IDEAsamles\\biyesheji\\sdims\\src\\main\\webapp\\resources\\images"+dbpath)) ;
 			byte [] flush = new byte[1024];
 			int len = 0 ;
 			while(-1!=(len=is.read(flush))){

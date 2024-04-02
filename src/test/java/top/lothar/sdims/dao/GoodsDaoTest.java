@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import top.lothar.sdims.BaseTest;
 import top.lothar.sdims.entity.Goods;
-
 public class GoodsDaoTest extends BaseTest{
 	
 	@Autowired

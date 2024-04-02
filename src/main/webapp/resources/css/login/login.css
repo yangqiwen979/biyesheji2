@@ -22,7 +22,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #3f2766;
+  background: #275966;
 }
 .form {
   display: -webkit-box;
@@ -100,7 +100,7 @@ main {
   top: 0;
   height: 100%;
   width: 100%;
-  background: #4d317a;
+  background: #31677a;
   z-index: -4;
   border-radius: 50%;
   -webkit-transition: all 1.5s ease 0.3s;
@@ -155,10 +155,10 @@ body.document-loaded .form__cover:before {
   opacity: 0;
 }
 h1 {
-  font-size: 40px;
+  font-size: 35px;
   margin: 15px 0 20px 0;
   letter-spacing: 0.05em;
-  color: #714cab;
+  color: #4c80ab;
   font-weight: 700;
 }
 .styled-button {
@@ -178,7 +178,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.1em;
-  background: #714cac;
+  background: #4c72ac;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   overflow: hidden;
@@ -253,7 +253,7 @@ h1 {
           transform: translateX(0);
 }
 .styled-button:active {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(124, 41, 41, 0.27);
 }
 .styled-input {
   width: 100%;
