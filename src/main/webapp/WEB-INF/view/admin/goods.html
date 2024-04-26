@@ -50,7 +50,7 @@
                 <td>售价</td>
                 <td>商品描述</td>
                 <td>更新时间</td>
-                <td>图片</td>
+               <!-- <td>图片</td>-->
                 <td>操作</td>
             </tr>
             </thead>
@@ -120,12 +120,12 @@
                         <label style="margin-top: 7px">商品描述</label>
 						<input id="goodsDescInput" style="width: 80%;float: right" type="text" class="form-control" placeholder="商品描述"> 
                     </div>
-                    <div class="form-group">
+                   <!-- <div class="form-group">
                         <span style="font-weight: bold">＊</span>
                         <label style="margin-top: 7px">缩略图</label>
                         <input type="file" id="goodsPictureInput">
-						<!--<input id="goodsPictureInput" style="width: 80%;float: right" type="text" class="form-control" placeholder="缩略图"> -->
-                    </div>
+						&lt;!&ndash;<input id="goodsPictureInput" style="width: 80%;float: right" type="text" class="form-control" placeholder="缩略图"> &ndash;&gt;
+                    </div>-->
                 </div>
                 <!-- 弹窗底部 -->
                 <div class="modal-footer">
@@ -167,7 +167,7 @@
                     <div class="form-group">
                     	<span style="font-weight: bold">＊</span>
                         <label style="margin-top: 7px">品牌</label>
-						<input id="goodsBrandEdit"readonly="readonly" style="width: 80%;float: right" type="text" class="form-control" placeholder="品牌"> 
+						<input id="goodsBrandEdit" readonly="readonly" style="width: 80%;float: right" type="text" class="form-control" placeholder="品牌">
                     </div>
                     <div class="form-group">
                     	<span style="font-weight: bold">＊</span>
@@ -194,12 +194,12 @@
                         <label style="margin-top: 7px">商品描述</label>
 						<input id="goodsDescEdit" style="width: 80%;float: right" type="text" class="form-control" placeholder="商品描述"> 
                     </div>
-                    <div class="form-group">
-                        <span style="font-weight: bold">＊</span>
-                        <label style="margin-top: 7px">缩略图</label>
-                        <input type="file" id="goodsPictureEdit">
-					<!--	<input id="goodsPictureEdit" style="width: 80%;float: right" type="text" class="form-control" placeholder="缩略图"> -->
-                    </div>
+<!--                    <div class="form-group">-->
+<!--                        <span style="font-weight: bold">＊</span>-->
+<!--                        <label style="margin-top: 7px">缩略图</label>-->
+<!--                        <input type="file" id="goodsPictureEdit">-->
+<!--					&lt;!&ndash;	<input id="goodsPictureEdit" style="width: 80%;float: right" type="text" class="form-control" placeholder="缩略图"> &ndash;&gt;-->
+<!--                    </div>-->
                     <div class="form-group">
                     	<span style="font-weight: bold">＊</span>
                         <label style="margin-top: 7px">Id</label>
@@ -228,7 +228,8 @@
 		goods.buyPrice = $('#goodsBuyPriceInput').val();
 		goods.salePrice = $('#goodsSalePriceInput').val();
 		goods.goodsDesc = $('#goodsDescInput').val();
-		goods.picture = $('#goodsPictureInput').val();
+		// goods.picture = $('#goodsPictureInput').val();
+        goods.picture = "abc";
 		goods.updateTime = new Date();
 		//判断必填项是否没填
 		if (goods.name == "" || goods.code == "") {
@@ -277,7 +278,8 @@
 		goods.buyPrice = $('#goodsBuyPriceEdit').val();
 		goods.salePrice = $('#goodsSalePriceEdit').val();
 		goods.goodsDesc = $('#goodsDescEdit').val();
-		goods.picture = $('#goodsPictureEdit').val();
+		// goods.picture = $('#goodsPictureEdit').val();
+        goods.picture = "def";
 		// 生成表单对象，用于接收参数并传递给后台
 		var formData = new FormData();
 		// 将employee json对象转成字符流保存至表单对象key为employeeStr的的键值对里

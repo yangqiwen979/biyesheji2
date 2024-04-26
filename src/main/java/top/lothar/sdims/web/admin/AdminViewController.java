@@ -149,6 +149,23 @@ public class AdminViewController {
 	public String saleStatistics() {
 		return "statistics/salestatistics";
 	}
+	/**
+	 * 销售统计
+	 * @return
+	 */
+	@RequestMapping(value="salestatisticsBingtu", method=RequestMethod.GET)
+	public String salestatisticsBingtu() {
+		return "statistics/salestatisticsBingtu";
+	}
+
+	/**
+	 * 销售统计
+	 * @return
+	 */
+	@RequestMapping(value="salestatisticsYuCe", method=RequestMethod.GET)
+	public String salestatisticsYuCe() {
+		return "statistics/salestatisticsYuCe";
+	}
 	/*-------------------------------------------用户管理页----------------------------------------------*/
 	/**
 	 * 用户管理页(管理员专用路由)

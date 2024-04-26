@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import top.lothar.sdims.dto.EchartsDataBing;
 import top.lothar.sdims.entity.EchartsData;
 import top.lothar.sdims.service.EchartsDataService;
 
@@ -57,6 +58,46 @@ public class EchartsDataController {
 			// TODO: handle exception
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "采购单数据获取错误");
+		}
+		return modelMap;
+	}
+
+	/**
+	   获取每件商品占据的比重
+	 */
+	@ResponseBody
+	@RequestMapping(value="/getsaleorderechartsdatalistBing",method=RequestMethod.GET)
+	@CrossOrigin(origins = "*", maxAge = 3600)
+	private Map<String, Object> getsaleorderechartsdatalistBing(){
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		try {
+			EchartsDataBing dataBing = echartsDataService.querySaleOrderListByType();
+			modelMap.put("success", true);
+			modelMap.put("echartsDataList", dataBing);
+		} catch (Exception e) {
+			// TODO: handle exception
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "销售单数据获取错误");
+		}
+		return modelMap;
+	}
+
+	/**
+	 *  预测 每件商品的销量
+	 */
+	@ResponseBody
+	@RequestMapping(value="/getsaleorderechartsdatalistYuCe",method=RequestMethod.GET)
+	@CrossOrigin(origins = "*", maxAge = 3600)
+	private Map<String, Object> getsaleorderechartsdatalistYuCe(){
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		try {
+			EchartsDataBing dataBing = echartsDataService.querySaleOrderListYuCe();
+			modelMap.put("success", true);
+			modelMap.put("echartsDataList", dataBing);
+		} catch (Exception e) {
+			// TODO: handle exception
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "销售单数据获取错误");
 		}
 		return modelMap;
 	}

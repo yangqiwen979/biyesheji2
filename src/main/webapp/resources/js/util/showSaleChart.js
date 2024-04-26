@@ -46,90 +46,90 @@ option = {
 	xAxis : [ {
 		type : 'category',
 		data : [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月',
-				'11月', '12月' ]
+			'11月', '12月' ]
 	} ],
 	yAxis : [
-	// 左侧Y轴
-	{
-		type : 'value',
-		name : "销\n售\n量\n数\n︵\n件\n︶",
-		nameLocation : "center",
-		nameGap : 35,
-		nameRotate : 0,
-		min : 0,
-		max : 2000,
-		splitLine:{ //去掉背景水平网格线
-		 show:false
-		},
-		nameTextStyle : {
-			fontSize : 15,
-		},
-		// 默认以千分位显示，不想用的可以在这加一段
-		axisLabel : { // 调整左侧Y轴刻度， 直接按对应数据显示
-			show : true,
-			showMinLabel : true,
-			showMaxLabel : true,
-			formatter : function(value) {
-				return value;
+		// 左侧Y轴
+		{
+			type : 'value',
+			name : "销\n售\n量\n数\n︵\n件\n︶",
+			nameLocation : "center",
+			nameGap : 35,
+			nameRotate : 0,
+			min : 0,
+			max : 2000,
+			splitLine:{ //去掉背景水平网格线
+				show:false
+			},
+			nameTextStyle : {
+				fontSize : 15,
+			},
+			// 默认以千分位显示，不想用的可以在这加一段
+			axisLabel : { // 调整左侧Y轴刻度， 直接按对应数据显示
+				show : true,
+				showMinLabel : true,
+				showMaxLabel : true,
+				formatter : function(value) {
+					return value;
+				}
 			}
-		}
-	},
-	// 右侧Y轴
-	{
-		type : 'value',
-		name : "销\n售\n金\n额\n︵\n元\n︶",
-		nameLocation : "center",
-		nameGap : 50,
-		nameRotate : 0,
-		min : 0,
-		max : 999999,
-		nameTextStyle : {
-			fontSize : 15,
 		},
-		// 默认以千分位显示，不想用的可以在这加一段
-		axisLabel : { // 调整右侧Y轴刻度， 直接按对应数据显示
-			show : true,
-			showMinLabel : true,
-			showMaxLabel : true,
-			formatter : function(value) {
-				return value;
+		// 右侧Y轴
+		{
+			type : 'value',
+			name : "销\n售\n金\n额\n︵\n元\n︶",
+			nameLocation : "center",
+			nameGap : 50,
+			nameRotate : 0,
+			min : 0,
+			max : 999999,
+			nameTextStyle : {
+				fontSize : 15,
+			},
+			// 默认以千分位显示，不想用的可以在这加一段
+			axisLabel : { // 调整右侧Y轴刻度， 直接按对应数据显示
+				show : true,
+				showMinLabel : true,
+				showMaxLabel : true,
+				formatter : function(value) {
+					return value;
+				}
 			}
-		}
-	} ],
+		} ],
 	series : [
-	// 依据左侧Y轴展示
-	{
-		name : '销售量',
-		type : 'line',
-		smooth : true,
-		yAxisIndex : 0,
-		data : [],
-		itemStyle : {
-			normal : {
-				label : {
-					show : true
+		// 依据左侧Y轴展示
+		{
+			name : '销售量',
+			type : 'line',
+			smooth : true,
+			yAxisIndex : 0,
+			data : [],
+			itemStyle : {
+				normal : {
+					label : {
+						show : true
+					}
 				}
-			}
+			},
 		},
-	},
-	// 依据右侧Y轴展示
-	{
-		name : '销售金额',
-		type : 'line',
-		smooth : true,
-		yAxisIndex : 1,
-		data : [],
-		itemStyle : {
-			normal : {
-				label : {
-					show : true
+		// 依据右侧Y轴展示
+		{
+			name : '销售金额',
+			type : 'line',
+			smooth : true,
+			yAxisIndex : 1,
+			data : [],
+			itemStyle : {
+				normal : {
+					label : {
+						show : true
+					}
 				}
-			}
-		},
-	} ]
+			},
+		} ]
 };
 $(function() {
-	chartOutChar = echarts.init(document.getElementById('smain'));
+	chartOutChar = echarts.init(document.getElementById('saleLine'));
 	// 展示加载提示
 	chartOutChar.showLoading({
 		text : "采购数据正在努力加载..."

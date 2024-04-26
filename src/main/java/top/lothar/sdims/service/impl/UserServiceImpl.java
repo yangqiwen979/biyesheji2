@@ -53,6 +53,7 @@ public class UserServiceImpl implements UserService {
 	public User checkLoginInfo(String account, String password) {
 		// TODO Auto-generated method stub
 		String MDPassword = MD5.getMd5(password);
+
 		return userDao.checkLoginInfo(account, MDPassword);
 	}
 	

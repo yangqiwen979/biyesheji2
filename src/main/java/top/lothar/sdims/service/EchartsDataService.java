@@ -2,6 +2,7 @@ package top.lothar.sdims.service;
 
 import java.util.List;
 
+import top.lothar.sdims.dto.EchartsDataBing;
 import top.lothar.sdims.entity.EchartsData;
 
 public interface EchartsDataService {
@@ -17,4 +18,8 @@ public interface EchartsDataService {
 	 * @return
 	 */
 	List<EchartsData> getSaleOrderEchartsDataList();
+
+	EchartsDataBing querySaleOrderListByType();
+
+	EchartsDataBing querySaleOrderListYuCe();
 }

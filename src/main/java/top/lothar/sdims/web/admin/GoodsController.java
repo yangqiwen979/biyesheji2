@@ -1,6 +1,8 @@
 package top.lothar.sdims.web.admin;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -226,20 +228,20 @@ public class GoodsController {
 			goods = objectMapper.readValue(goodsStr, Goods.class);
 
 			String path = goods.getPicture();
-			//TODO 保存图片路径
-			InputStream is = new BufferedInputStream(new FileInputStream(path));
-			String dbpath = ImageUtils.getRandomFileName()+".jpg";
-			OutputStream os = new BufferedOutputStream(new FileOutputStream("D:\\IDEAsamles\\biyesheji\\sdims\\src\\main\\webapp\\resources\\images"+dbpath)) ;
-			byte [] flush = new byte[1024];
-			int len = 0 ;
-			while(-1!=(len=is.read(flush))){
-				os.write(flush, 0, len);
-			}
-			os.flush();
-			os.close();
-			is.close();
-			//设置新路径
-			goods.setPicture(dbpath);
+//			//TODO 保存图片路径
+//			InputStream is = new BufferedInputStream(Files.newInputStream(Paths.get(path)));
+//			String dbpath = ImageUtils.getRandomFileName()+".jpg";
+//			OutputStream os = new BufferedOutputStream(Files.newOutputStream(Paths.get("D:\\IDEAsamles\\biyesheji\\sdims\\src\\main\\webapp\\resources\\images" + dbpath))) ;
+//			byte [] flush = new byte[1024];
+//			int len = 0 ;
+//			while(-1!=(len=is.read(flush))){
+//				os.write(flush, 0, len);
+//			}
+//			os.flush();
+//			os.close();
+//			is.close();
+//			//设置新路径
+//			goods.setPicture(dbpath);
 			//设置更新的时间
 			goods.setUpdateTime(new Date());
 		} catch (Exception e) {

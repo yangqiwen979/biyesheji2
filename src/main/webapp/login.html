@@ -70,21 +70,23 @@
 			},
 			success : function(data) {
 				if (data.success) {
+					console.info(data.state)
 					switch(data.state){
 						case 1:
 							window.location.href="/sdims/admin/index";
 							break;
 						case 2:
-							window.location.href="/sdims/stock/index";
-							break;
+							// window.location.href="/sdims/stock/index";
+
 						case 3:
-							window.location.href="/sdims/purchase/index";
-							break;
+							// window.location.href="/sdims/purchase/index";
+							// break;
 						case 4:
-							window.location.href="/sdims/sale/index";
-							break;
+							// window.location.href="/sdims/sale/index";
+							// break;
 						case 5:
-							window.location.href="/sdims/ordercheck/index";
+							// window.location.href="/sdims/ordercheck/index";
+							window.location.href="/sdims/regularUsers/index";
 							break;
 					}
 				}else {

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.css" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../resources/css/admin/index.css">
 </head>
 <body>
@@ -149,6 +149,24 @@
 						</ul>
 					</li>
 					<!------------------统计分析---------------- -->
+<!--					<li>-->
+<!--						<a href="#statisticsSetting" class="nav-header collapsed" data-toggle="collapse">-->
+<!--							<i class="glyphicon glyphicon-star"></i>统计分析-->
+<!--							<span class="pull-right glyphicon glyphicon-chevron-toggle"></span>-->
+<!--						</a>-->
+<!--						<ul id="statisticsSetting" class="nav nav-list secondmenu collapse">-->
+<!--							<li>-->
+<!--								<a href="javascript:void(0);" onclick="PurchaseStatistics()">-->
+<!--									<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="PurchaseStatisticsManager">采购统计</span>-->
+<!--								</a>-->
+<!--							</li>-->
+<!--							<li>-->
+<!--								<a  href="javascript:void(0);" onclick="SaleStatistics()">-->
+<!--									<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsManager">销售统计</span>-->
+<!--								</a>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</li>-->
 					<li>
 						<a href="#statisticsSetting" class="nav-header collapsed" data-toggle="collapse">
 							<i class="glyphicon glyphicon-star"></i>统计分析
@@ -161,9 +179,27 @@
 								</a>
 							</li>
 							<li>
-								<a  href="javascript:void(0);" onclick="SaleStatistics()">
-									<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsManager">销售统计</span>
+								<a class="nav-header collapsed" data-toggle="collapse" data-parent="#statisticsSetting" href="#saleStatisticsTuSetting">
+									<i class="glyphicon glyphicon-star" ></i>销售统计
+									<span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
 								</a>
+								<ul id="saleStatisticsTuSetting" class="nav nav-list threemenu collapse" >
+									<li style="float: right">
+										<a  href="javascript:void(0);"  onclick="SaleLineStatistics()">
+											<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsLineManager">销售统计折线图</span>
+										</a>
+									</li>
+									<li style="float: right">
+										<a  href="javascript:void(0);" onclick="SaleBingStatistics()">
+											<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsBingManager">销售统计饼状图</span>
+										</a>
+									</li>
+									<li style="float: right">
+										<a  href="javascript:void(0);" onclick="SaleYuCeStatistics()">
+											<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsYuCeManager">销售统计预测图</span>
+										</a>
+									</li>
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -211,7 +247,7 @@
 	<div id="bottomLine">
 		<span class="bottomFont">&copy2024&nbsp;企业进销存管理系统&nbsp;</span>
 	</div>
-	<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>	
+	<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		//当前用户名默认加载函数
@@ -275,5 +311,10 @@
 	<script src="../resources/js/statistics/purchaseStatisticsLable.js"></script>
 	<!-- 销售统计标签栏.js控制文件 -->
 	<script src="../resources/js/statistics/saleStatisticsLable.js"></script>
+
+
+<!--	<script src="../resources/js/statistics/showSaleChart.js"></script>-->
+<!--	<script src="../resources/js/statistics/showSaleChartBingtu.js"></script>-->
+<!--	<script src="../resources/js/statistics/showSaleChartYuCe.js"></script>-->
 </body>
 </html>

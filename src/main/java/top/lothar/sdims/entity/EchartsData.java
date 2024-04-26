@@ -6,6 +6,7 @@ public class EchartsData {
 	
 	private Double totalPrice;
 
+
 	public Integer getTotalCount() {
 		return totalCount;
 	}

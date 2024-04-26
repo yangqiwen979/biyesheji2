@@ -137,6 +137,30 @@ footer.duomi-page-footer .list-inline a, footer.authenticated-footer .list-inlin
 	color: #ffffff;
 }
 
+
+.threemenu a {
+	font-size: 12px;
+	color: #4A515B;
+	/*text-align: center;*/
+	border-radius: 4px;
+}
+
+.threemenu>li>a:hover {
+	background-color: #6f7782;
+	border-color: #428bca;
+	color: #fff;
+}
+
+.threemenu li.active {
+	background-color: #6f7782;
+	border-color: #428bca;
+	border-radius: 4px;
+}
+
+.threemenu li.active>a {
+	color: #ffffff;
+}
+
 .navbar-static-top {
 	background-color: #212121;
 	margin-bottom: 5px;

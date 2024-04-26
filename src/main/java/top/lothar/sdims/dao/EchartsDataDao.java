@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import top.lothar.sdims.dto.EchartsDataBing;
 import top.lothar.sdims.entity.PurchaseOrder;
 import top.lothar.sdims.entity.SaleOrder;
 
@@ -23,4 +24,8 @@ public interface EchartsDataDao {
 	 * @return
 	 */
 	List<SaleOrder> querySaleOrderListByDate(@Param("startDate")String startDate,@Param("endDate")String endDate);
+
+
+	List<EchartsDataBing> querySaleOrderListByType(@Param("startDate")String startDate,@Param("endDate")String endDate);
+	List<EchartsDataBing> querySaleOrderListYuCe(@Param("startDate")String startDate,@Param("endDate")String endDate);
 }

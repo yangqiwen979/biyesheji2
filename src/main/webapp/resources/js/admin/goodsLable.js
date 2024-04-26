@@ -83,12 +83,12 @@ function getGoodsInfoToTables(data) {
 		var updateTime = $("<td></td>").append(new Date(item.updateTime).format('Y-m-d H:i:s'));
 
 		//添加 img  ../resources/js/util/closable-tab-div.js
-		var img = document.createElement("img");
-		//设置 img 图片地址
-		img.src = "../resources/images/"+item.picture;
-		img.style.width = '100px';
-		img.style.height = '100px';
-		var picture = $("<td></td>").append(img);
+		// var img = document.createElement("img");
+		// //设置 img 图片地址
+		// img.src = "../../../resources/images/"+item.picture;
+		// img.style.width = '100px';
+		// img.style.height = '100px';
+		// var picture = $("<td></td>").append(img);
 
 		$("<tr></tr>")
 		.append(id)
@@ -102,7 +102,7 @@ function getGoodsInfoToTables(data) {
 		.append(salePrice)
 		.append(goodsDesc)
 		.append(updateTime)
-		.append(picture)
+		// .append(picture)
 		.append(btnTd)
 		.appendTo("#table-goods");
 	});
@@ -120,8 +120,8 @@ function build_goodspage_info(data) {
 }
 /**
  * 解析显示分页条
- * @param result
  * @returns
+ * @param data
  */
 function build_goodspage_nav(data) {
 	$("#page_nav_goods").empty();
@@ -244,7 +244,7 @@ $(document).on("click",".edit_goods_btn",function(){
 			$('#goodsBuyPriceEdit').val(data.goods.buyPrice);
 			$('#goodsSalePriceEdit').val(data.goods.salePrice);
 			$('#goodsDescEdit').val(data.goods.goodsDesc);
-			$('#goodsPictureEdit').val(data.goods.picture);
+			// $('#goodsPictureEdit').val(data.goods.picture);
 		}
 	});
 	$('#EditgoodsModal').modal();
