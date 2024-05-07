@@ -65,9 +65,18 @@
 						</a>
 						<ul id="statisticsSetting" class="nav nav-list secondmenu collapse">
 							<li>
-								<a  href="javascript:void(0);" onclick="SaleStatistics()">
-									<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsManager">销售统计</span>
+								<a class="nav-header collapsed" data-toggle="collapse" data-parent="#statisticsSetting" href="#saleStatisticsTuSetting">
+									<i class="glyphicon glyphicon-star" ></i>销售统计
+									<span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
 								</a>
+								<ul id="saleStatisticsTuSetting" class="nav nav-list threemenu collapse" >
+									<li style="float: right">
+										<a  href="javascript:void(0);"  onclick="SaleLineStatistics()">
+											<i class="glyphicon glyphicon-tasks"></i>&nbsp;<span id="SaleStatisticsLineManager">销售统计折线图</span>
+										</a>
+									</li>
+
+								</ul>
 							</li>
 						</ul>
 					</li>
@@ -141,7 +150,7 @@
 	<script src="../resources/js/sale/saleOrderLable.js"></script>
 	<!-- 用户管理标签栏.js控制文件 -->
 	<script src="../resources/js/comment/modifyPasswordLable.js"></script>
-		<!-- 销售统计标签栏.js控制文件 -->
+	<!-- 销售统计标签栏.js控制文件 -->
 	<script src="../resources/js/statistics/saleStatisticsLable.js"></script>
 </body>
 </html>
