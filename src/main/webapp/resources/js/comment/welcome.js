@@ -1,7 +1,7 @@
 $(function() {
 	var item = {
 		'id' : '1',
-		'name' : '关于系统',
+		'name' : '首页',
 		'url' : 'welcome.html',
 		'closable' : false
 	};

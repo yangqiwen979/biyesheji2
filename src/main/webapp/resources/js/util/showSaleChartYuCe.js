@@ -56,6 +56,7 @@ function initChart(){
 			},
 			]
 	};
+
 	setTimeout(function (){
 		echarts.registerTransform(ecStat.transform.regression);
 		myChart.setOption(option);
