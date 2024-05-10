@@ -28,7 +28,7 @@ optionBing = {
 			label: {
 				show: true,
 				position: 'outside', // 设置标签在饼图外部
-				formatter: '{b}: {d}%' // 设置标签的显示格式，{b} 是数据项的名称，{d} 是百分比
+				formatter: '{b}: :{c} :{d}%' // 设置标签的显示格式，{b} 是数据项的名称，{d} 是百分比
 			},
 			emphasis: {
 				itemStyle: {

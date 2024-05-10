@@ -26,6 +26,9 @@ function initChart(){
 			}
 		},
 		xAxis: {
+			type:'category',
+			data : [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月',
+				'11月', '12月' ],
 			splitLine: {
 				lineStyle: {
 					type: 'dashed'
@@ -79,7 +82,7 @@ function getData(){
 		dataType : "json", // 返回数据形式为json
 		success : function(data) {
 			if (data.success) {
-				dataSource = data.echartsDataList.forecastList;
+				dataSource = data.echartsDataList.forecastList;//????
 				for (var i = 0; i < dataSource.length; i++) {
 					dataList.push(dataSource[i][1]);
 				}
@@ -116,7 +119,5 @@ function getData(){
 				}
 			}
 		],
-
 	})
-
 }
