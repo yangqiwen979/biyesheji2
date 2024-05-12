@@ -1,9 +1,9 @@
 
 let myChart =null;
-$(function() {
+ $(function() {
 
 	initChart();
-})
+  })
 
 function initChart(){
 	myChart = echarts.init(document.getElementById('saleYuCe'));
@@ -26,9 +26,9 @@ function initChart(){
 			}
 		},
 		xAxis: {
-			type:'category',
-			data : [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月',
-				'11月', '12月' ],
+			type : 'category',
+			data : [ '2023-05','2023-06','2023-07','2023-08','2023-09','2023-10',
+			    	'2023-11','2023-12','2024-01','2024-02','2024-03','预测值'],
 			splitLine: {
 				lineStyle: {
 					type: 'dashed'
@@ -50,6 +50,7 @@ function initChart(){
 			{
 				name: '预测销量',
 				type: 'line',
+				smooth: true,
 				datasetIndex: 1,
 				symbolSize: 0.1,
 				symbol: 'circle',
@@ -57,15 +58,26 @@ function initChart(){
 				labelLayout: { dx: -20 },
 				encode: { label: 2, tooltip: 1 }
 			},
+			/*{
+				name: 'New Data Series',
+				type: 'line',
+				smooth: true,
+				data: newDataList,
+				lineStyle: {
+					type: 'dashed' // Display as dashed line
+				}
+			}*/
 			]
 	};
+
 
 	setTimeout(function (){
 		echarts.registerTransform(ecStat.transform.regression);
 		myChart.setOption(option);
 	})
 
-}
+
+  }
 function getData(){
 	// const data =[[0, 10], [1, 12], [2, 20], [3, 25], [4, 31], [5, 38]];
 	let dataSource =[];
@@ -82,7 +94,9 @@ function getData(){
 		dataType : "json", // 返回数据形式为json
 		success : function(data) {
 			if (data.success) {
-				dataSource = data.echartsDataList.forecastList;//????
+				// dataSource = data.echartsDataList.forecastList;//????
+				dataSource = data.echartsDataList.forecastList;
+				/*newDataList = ['2','3','4','5','2','','7'];*/
 				for (var i = 0; i < dataSource.length; i++) {
 					dataList.push(dataSource[i][1]);
 				}
@@ -103,6 +117,8 @@ function getData(){
 			}
 		}
 	});
+
+
 	myChart.setOption({
 		title:{
 			text: '销量线性回归图',
@@ -113,11 +129,15 @@ function getData(){
 			{
 				source: dataSource
 			},
+
 			{
 				transform: {
-					type: 'ecStat:regression'
-				}
+					type: 'ecStat:regression',  // Use ecStat's regression transformation
+					config: { method: "linear"}  // Specify linear regression
+				},
 			}
 		],
 	})
+
+
 }

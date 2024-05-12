@@ -30,9 +30,9 @@ public class EchartsDataDaoTest extends BaseTest{
 			EchartsData echartsData = new EchartsData();
 			startDate = "2019-"+i+"-01";
 			if (i==12) {
-				endDate = "2019-"+i+"-31";
+				endDate = "2024-"+i+"-31";
 			}else {
-				endDate = "2019-"+(i+1)+"-01";
+				endDate = "2024-"+(i+1)+"-01";
 			}	
 			purchaseOrderList = echartsDataDao.queryPurchaseOrderListByDate(startDate, endDate);
 			

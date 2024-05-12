@@ -3,6 +3,8 @@ package top.lothar.sdims.web.echarts;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -29,7 +31,7 @@ public class EchartsDataController {
 	private Map<String, Object> getEchartsDataList(){
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		try {
-			List<EchartsData> echartsDataList = echartsDataService.getEchartsDataList();
+			Map<String, Object> echartsDataList = echartsDataService.getEchartsDataList();
 			modelMap.put("success", true);
 			modelMap.put("echartsDataList", echartsDataList);
 		} catch (Exception e) {
@@ -51,11 +53,13 @@ public class EchartsDataController {
 	private Map<String, Object> getSaleOrderEchartsDataList(){
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		try {
-			List<EchartsData> echartsDataList = echartsDataService.getSaleOrderEchartsDataList();
+			Map<String,Object> echartsDataList = echartsDataService.getSaleOrderEchartsDataList();
 			modelMap.put("success", true);
 			modelMap.put("echartsDataList", echartsDataList);
 		} catch (Exception e) {
 			// TODO: handle exception
+			System.out.println(e.getMessage());
+			e.printStackTrace();
 			modelMap.put("success", false);
 			modelMap.put("errMsg", "采购单数据获取错误");
 		}
@@ -91,9 +95,9 @@ public class EchartsDataController {
 	private Map<String, Object> getsaleorderechartsdatalistYuCe(){
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 		try {
-			EchartsDataBing dataBing = echartsDataService.querySaleOrderListYuCe();
+			EchartsDataBing list = echartsDataService.querySaleOrderListYuCe();
 			modelMap.put("success", true);
-			modelMap.put("echartsDataList", dataBing);
+			modelMap.put("echartsDataList", list);
 		} catch (Exception e) {
 			// TODO: handle exception
 			modelMap.put("success", false);

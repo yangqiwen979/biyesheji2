@@ -45,8 +45,8 @@ option = {
 	calculable : true,
 	xAxis : [ {
 		type : 'category',
-		data : [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月',
-				'11月', '12月' ]
+		/*data : [ '1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月',
+				'11月', '12月' ]*/
 	} ],
 	yAxis : [
 	// 左侧Y轴
@@ -147,6 +147,7 @@ function getChartData() {
 	var totalCountData = [];
 	// 各个月份总采购额数组
 	var totalPriceData = [];
+	var months =[];
 	// 后台数据地址
 	var echartsDataUrl = "/sdims/admin/getechartsdatalist";
 	// 获得图表的options对象
@@ -160,12 +161,14 @@ function getChartData() {
 		dataType : "json", // 返回数据形式为json
 		success : function(data) {
 			if (data.success) {
-				$.each(data.echartsDataList, function(index, item) {
+				$.each(data.echartsDataList.data, function(index, item) {
 					totalCountData[index] = item.totalCount;
 					totalPriceData[index] = item.totalPrice;
 				})
+				months=data.echartsDataList.date
 				options.series[0].data = totalCountData;
 				options.series[1].data = totalPriceData;
+				options.xAxis[0].data=months
 				// //隐藏加载提示，展示新的option
 				chartOutChar.hideLoading();
 				chartOutChar.setOption(options);
