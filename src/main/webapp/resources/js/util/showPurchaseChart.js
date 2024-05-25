@@ -162,13 +162,13 @@ function getChartData() {
 		success : function(data) {
 			if (data.success) {
 				$.each(data.echartsDataList.data, function(index, item) {
-					totalCountData[index] = item.totalCount;
-					totalPriceData[index] = item.totalPrice;
+					totalCountData[index] = item.totalCount;//记录月份销售总数
+					totalPriceData[index] = item.totalPrice;//记录月份销售总额
 				})
-				months=data.echartsDataList.date
-				options.series[0].data = totalCountData;
-				options.series[1].data = totalPriceData;
-				options.xAxis[0].data=months
+				months=data.echartsDataList.date //x轴为对应的月份
+				options.series[0].data = totalCountData;//y轴1
+				options.series[1].data = totalPriceData;//y轴2
+				options.xAxis[0].data=months//x轴为对应的月份
 				// //隐藏加载提示，展示新的option
 				chartOutChar.hideLoading();
 				chartOutChar.setOption(options);

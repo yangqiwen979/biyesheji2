@@ -19,10 +19,10 @@ public class EmployeeServiceTest extends BaseTest{
 		Employee employeeCondition = new Employee();
 		
 		Employee employeeConditionByName = new Employee();
-		employeeConditionByName.setName("赵路通");
+		employeeConditionByName.setName("杨一");
 		
 		Employee employeeConditionByType = new Employee();
-		employeeConditionByType.setType("库存管理员");
+		employeeConditionByType.setType("库管");
 		
 		EmployeeExecution employeeExecution = employeeService.getEmployeeList(employeeCondition, 1,4);
 		System.out.println(employeeExecution.getCount());

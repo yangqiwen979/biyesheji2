@@ -69,13 +69,13 @@ public class PurchaseOrderDaoTest extends BaseTest{
 	public void testEQueryPurchaseOrderList() {
 		//商品名称条件查询
 		Goods goods = new Goods();
-		goods.setName("实木防盗门");
+		goods.setName("汽油发电机");
 		//供应商名称查询
 		Supplier supplier = new Supplier();
-		supplier.setName("冠仕供应商");
+		supplier.setName("供应商");
 		//仓库名称查询
 		Repository repository = new Repository();
-		repository.setName("洛阳洛龙区");
+		repository.setName("深水");
 		
 		
 		PurchaseOrder purchaseOrderCondition = new PurchaseOrder();
@@ -95,13 +95,13 @@ public class PurchaseOrderDaoTest extends BaseTest{
 	public void testFQueryPurchaseOrderCount() {
 		//商品名称条件查询
 		Goods goods = new Goods();
-		goods.setName("实木防盗门");
+		goods.setName("汽油发电机");
 		//供应商名称查询
 		Supplier supplier = new Supplier();
-		supplier.setName("冠仕供应商");
+		supplier.setName("供应商");
 		//仓库名称查询
 		Repository repository = new Repository();
-		repository.setName("洛阳洛龙区");
+		repository.setName("沈水");
 		PurchaseOrder purchaseOrderCondition = new PurchaseOrder();
 //		purchaseOrderCondition.setGoods(goods);
 //		purchaseOrderCondition.setSupplier(supplier);

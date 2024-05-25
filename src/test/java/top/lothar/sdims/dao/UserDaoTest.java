@@ -25,7 +25,7 @@ public class UserDaoTest extends BaseTest{
 		role.setRoleId(5L);
 		employee.setEmployeeId(5L);
 		User user = new User();
-		user.setAccount("xiaodan");
+		user.setAccount("dan");
 		user.setPassword("111111");
 		user.setRoleName("订单审核员");
 		user.setEmployee(employee);
@@ -81,7 +81,7 @@ public class UserDaoTest extends BaseTest{
 	
 	@Ignore
 	public void FUpdatePasswordById() {
-		int updatePasswordById = userDao.updatePasswordById(7, "xiaodan", "111111", "222222", new Date());
+		int updatePasswordById = userDao.updatePasswordById(7, "dan", "111111", "222222", new Date());
 		System.out.println(updatePasswordById);
 	}
 	
@@ -97,7 +97,7 @@ public class UserDaoTest extends BaseTest{
 	
 	@Ignore
 	public void tests() {
-		String account = "xiaokuddd";
+		String account = "ku";
 		int registerCheckUserAccount = userDao.registerCheckUserAccount(account);
 		System.out.println(registerCheckUserAccount);
 	}

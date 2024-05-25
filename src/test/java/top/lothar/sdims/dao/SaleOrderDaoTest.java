@@ -58,7 +58,7 @@ public class SaleOrderDaoTest extends BaseTest{
 		saleOrder.setGoods(goods);
 		saleOrder.setCustomer(customer);
 		saleOrder.setRepository(repository);
-		saleOrder.setCustomerName("伊滨赵村经销商");
+		saleOrder.setCustomerName("丹东经销商");
 		saleOrder.setCreateTime(new Date());
 		saleOrder.setCheckState(1);
 		saleOrder.setCheckResult("审核通过");
@@ -77,13 +77,13 @@ public class SaleOrderDaoTest extends BaseTest{
 		SaleOrder saleOrderCondition = new SaleOrder();
 		//商品名称条件查询
 		Goods goods = new Goods();
-		goods.setName("实木防盗门");
+		goods.setName("汽油发电机");
 		//销售商商名称查询
 		Customer customer = new Customer();
-		customer.setName("伊滨李村零售商");
+		customer.setName("丹东零售商");
 		//仓库名称查询
 		Repository repository = new Repository();
-		repository.setName("洛阳洛龙区");
+		repository.setName("大连");
 	
 //		saleOrderCondition.setRepository(repository);
 //		saleOrderCondition.setCustomer(customer);
@@ -101,13 +101,13 @@ public class SaleOrderDaoTest extends BaseTest{
 		SaleOrder saleOrderCondition = new SaleOrder();
 		//商品名称条件查询
 		Goods goods = new Goods();
-		goods.setName("实木防盗门");
+		goods.setName("汽油发电机");
 		//销售商商名称查询
 		Customer customer = new Customer();
-		customer.setName("伊滨李村零售商");
+		customer.setName("丹东零售商");
 		//仓库名称查询
 		Repository repository = new Repository();
-		repository.setName("洛阳洛龙区");
+		repository.setName("大连");
 	
 //		saleOrderCondition.setRepository(repository);
 //		saleOrderCondition.setCustomer(customer);

@@ -17,8 +17,8 @@ public class GoodsDaoTest extends BaseTest{
 	@Ignore
 	public void testAInsertGoods() {
 		Goods goods = new Goods();
-		goods.setName("双层防盗门");
-		goods.setCode("FD-1003");
+		goods.setName("发电机");
+		goods.setCode("1");
 		goods.setType("test");
 		goods.setBrand("test");
 		goods.setStandard("test");
@@ -59,8 +59,8 @@ public class GoodsDaoTest extends BaseTest{
 	@Ignore
 	public void testEQueryGoodsList() {
 		Goods goodsCondition = new Goods();
-		goodsCondition.setName("实木防盗门");
-		goodsCondition.setCode("FD-1001");
+		goodsCondition.setName("发电机");
+		goodsCondition.setCode("1");
 		List<Goods> queryGoodsList = goodsDao.queryGoodsList(goodsCondition, 0, 10);
 		for (Goods goods : queryGoodsList) {
 			System.out.println(goods.getName());
@@ -70,8 +70,8 @@ public class GoodsDaoTest extends BaseTest{
 	@Ignore
 	public void testFQueryGoodsCount() {
 		Goods goodsCondition = new Goods();
-		goodsCondition.setName("烤漆防盗门");
-		goodsCondition.setCode("FD-1002");
+		goodsCondition.setName("汽油发电机");
+		goodsCondition.setCode("2");
 		int queryGoodsCount = goodsDao.queryGoodsCount(goodsCondition);
 		System.out.println(queryGoodsCount);
 	}

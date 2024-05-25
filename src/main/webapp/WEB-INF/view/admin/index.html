@@ -29,7 +29,7 @@
 	</div>
 	
 	<!-- 中部 -->
-	<div class="container-fluid">
+	<div class="container-fluid" >
 		<!-- 中间  -->
 		<div class="row">
 			<!-- 中间左侧导航 -->
@@ -60,11 +60,12 @@
 								<a href="javascript:void(0);" onclick="getEmployee()">
 									<i class="glyphicon glyphicon-user"></i>&nbsp;<span id="employeeManager">员工管理</span>
 								</a></li>
-							<li>
+
+							<!--<li>
 								<a href="javascript:void(0);" onclick="getRole()">
 									<i class="glyphicon glyphicon-folder-close"></i>&nbsp;<span id="roleManager">角色展示</span>
 								</a>
-							</li>
+							</li>-->
 						</ul>
 					</li>
 					<!------------------库存管理---------------- -->
@@ -119,7 +120,7 @@
 						<ul id="supplierSetting" class="nav nav-list secondmenu collapse">
 							<li>
 								<a href="javascript:void(0);" onclick="getPurchase()">
-									<i class="glyphicon glyphicon-user"></i>&nbsp;<span id="purchaseManager">供商管理</span>
+									<i class="glyphicon glyphicon-user"></i>&nbsp;<span id="purchaseManager">供应商管理</span>
 								</a>
 							</li>
 							<li>
@@ -209,6 +210,11 @@
 							<i class="glyphicon glyphicon-star"></i>账户管理 <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
 						</a>
 						<ul id="accountSetting" class="nav nav-list secondmenu collapse">
+							<li>
+								<a href="javascript:void(0);" onclick="getRole()">
+									<i class="glyphicon glyphicon-folder-close"></i>&nbsp;<span id="roleManager">角色展示</span>
+								</a>
+							</li>
 							<li>
 								<a  href="javascript:void(0);" onclick="getUser()">
 									<i class="glyphicon glyphicon-user"></i>&nbsp;<span id="userManager">用户管理</span>

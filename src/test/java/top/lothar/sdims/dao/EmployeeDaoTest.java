@@ -22,10 +22,10 @@ public class EmployeeDaoTest extends BaseTest{
 		Employee employeeCondition = new Employee();
 		
 		Employee employeeConditionByName = new Employee();
-		employeeConditionByName.setName("赵路通");
+		employeeConditionByName.setName("杨一");
 		
 		Employee employeeConditionByType = new Employee();
-		employeeConditionByType.setType("库存管理员");
+		employeeConditionByType.setType("库管");
 		//测试空参数，取全部
 		List<Employee> employeeList = employeeDao.queryEmployeeList(employeeCondition, 0, 4);
 		System.out.println(employeeList.size());
@@ -50,10 +50,10 @@ public class EmployeeDaoTest extends BaseTest{
 		Employee employeeCondition = new Employee();
 		
 		Employee employeeConditionByName = new Employee();
-		employeeConditionByName.setName("赵路通");
+		employeeConditionByName.setName("杨一");
 		
 		Employee employeeConditionByType = new Employee();
-		employeeConditionByType.setType("库存管理员");
+		employeeConditionByType.setType("库管");
 		
 		int effectNum = employeeDao.queryEmployeeCount(employeeCondition);
 		System.out.println("共有："+effectNum+"条");
@@ -68,13 +68,13 @@ public class EmployeeDaoTest extends BaseTest{
 	@Ignore
 	public void testCInsertEmployee() {
 		Employee employeeCondition = new Employee();
-		employeeCondition.setName("徐鹏辉");
-		employeeCondition.setCode("SD005");
-		employeeCondition.setIdCard("410021199564625876");
+		employeeCondition.setName("王二");
+		employeeCondition.setCode("YG002");
+		employeeCondition.setIdCard("211421200102023423");
 		employeeCondition.setMobile("18438655526");
 		employeeCondition.setSex(1);
-		employeeCondition.setAddress("洛阳师范学院");
-		employeeCondition.setEmail("809676295@qq.com");
+		employeeCondition.setAddress("江苏无锡");
+		employeeCondition.setEmail("1728328322@qq.com");
 		employeeCondition.setType("销售员");
 		employeeCondition.setUpdateTime(new Date());
 		int effectNum = employeeDao.insertEmployee(employeeCondition);

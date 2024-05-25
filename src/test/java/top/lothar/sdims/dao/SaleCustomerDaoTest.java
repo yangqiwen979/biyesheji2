@@ -20,12 +20,12 @@ public class SaleCustomerDaoTest extends BaseTest{
 	@Ignore
 	public void testAInsertSaleCustomer() {
 		Customer customer = new Customer();
-		customer.setName("伊滨钱村零售商");
-		customer.setLinkName("关桐");
+		customer.setName("大连零售商");
+		customer.setLinkName("李四");
 		customer.setMobile("456123789");
-		customer.setAddress("钱村生活超市对面");
+		customer.setAddress("辽宁大连");
 		customer.setCustomerDesc("零售商");
-		customer.setUpdater("xiaoxiao");
+		customer.setUpdater("xiao");
 		customer.setUpdateTime(new Date());
 		int insertSaleCustomer = saleCustomerDao.insertSaleCustomer(customer);
 		System.out.println(insertSaleCustomer);
@@ -55,7 +55,7 @@ public class SaleCustomerDaoTest extends BaseTest{
 	
 	@Ignore
 	public void testEQuerySaleCustomerList() {
-		List<Customer> customers = saleCustomerDao.querySaleCustomerList("伊滨李村零售商", 0, 5);
+		List<Customer> customers = saleCustomerDao.querySaleCustomerList("鞍山零售商", 0, 5);
 		for (Customer customer : customers) {
 			System.out.println(customer.getName());
 		}
@@ -63,7 +63,7 @@ public class SaleCustomerDaoTest extends BaseTest{
 	
 	@Ignore
 	public void testFQuerySaleCustomerCount() {
-		int querySaleCustomerCount = saleCustomerDao.querySaleCustomerCount("伊滨李村零售商");
+		int querySaleCustomerCount = saleCustomerDao.querySaleCustomerCount("鞍山零售商");
 		System.out.println(querySaleCustomerCount);
 	}
 	

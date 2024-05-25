@@ -19,11 +19,11 @@ public class PurchaseSupplierDaoTest extends BaseTest{
 	@Ignore
 	public void testAInsertPurchaseSupplie() {
 		Supplier supplier = new Supplier();
-		supplier.setName("真是强供销商");
-		supplier.setLinkName("刘雷");
+		supplier.setName("供销商");
+		supplier.setLinkName("赵四");
 		supplier.setMobile("123456789");
-		supplier.setAddress("广东省真强公司");
-		supplier.setSupplierDesc("很好");
+		supplier.setAddress("广东省");
+		supplier.setSupplierDesc("好");
 		supplier.setUpdateTime(new Date());
 		int insertPurchaseSupplie = purchaseSupplierDao.insertPurchaseSupplie(supplier);
 		System.out.println(insertPurchaseSupplie);
@@ -54,7 +54,7 @@ public class PurchaseSupplierDaoTest extends BaseTest{
 	
 	@Ignore
 	public void testEQueryPurchaseSupplierList() {
-		List<Supplier> suppliers = purchaseSupplierDao.queryPurchaseSupplierList("冠仕供应商", 0, 10);
+		List<Supplier> suppliers = purchaseSupplierDao.queryPurchaseSupplierList("帅哥供应商", 0, 10);
 		for (Supplier supplier : suppliers) {
 			System.out.println(supplier.getName());
 		}
@@ -62,7 +62,7 @@ public class PurchaseSupplierDaoTest extends BaseTest{
 	
 	@Ignore
 	public void testFQueryPurchaseSupplierCount() {
-		int queryPurchaseSupplierCount = purchaseSupplierDao.queryPurchaseSupplierCount("冠仕供应商");
+		int queryPurchaseSupplierCount = purchaseSupplierDao.queryPurchaseSupplierCount("帅哥供应商");
 		System.out.println(queryPurchaseSupplierCount);
 	}
 	

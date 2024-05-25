@@ -21,11 +21,11 @@ public class RepositoryDaoTest extends BaseTest{
 		Employee employee = new Employee();
 		employee.setEmployeeId(6L);
 		Repository repository = new Repository();
-		repository.setName("平顶山仓库");
-		repository.setCode("R002");
-		repository.setAddress("新城区");
+		repository.setName("仓库");
+		repository.setCode("01");
+		repository.setAddress("大连");
 		repository.setRepoDesc("库存充足");
-		repository.setUpdater("解增光");
+		repository.setUpdater("张三");
 		repository.setUpdateTime(new Date());
 		repository.setEmployee(employee);	
 		int effectNum = repositoryDao.insertRepository(repository);
@@ -43,7 +43,7 @@ public class RepositoryDaoTest extends BaseTest{
 		employee.setEmployeeId(6L);
 		Repository repository = new Repository();
 		repository.setRepoId(3L);
-		repository.setAddress("平顶山新华区");
+		repository.setAddress("北京");
 		repository.setUpdateTime(new Date());
 		repository.setEmployee(employee);
 		int effectNum = repositoryDao.updateRepository(repository);

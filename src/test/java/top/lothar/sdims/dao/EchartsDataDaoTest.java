@@ -22,13 +22,13 @@ public class EchartsDataDaoTest extends BaseTest{
 	
 	@Ignore
 	public void test() {
-		String startDate = "2019-04-01";
-		String endDate = "2019-05-01";
+		String startDate = "2023-05-01";
+		String endDate = "2024-05-01";
 		List<PurchaseOrder> purchaseOrderList = null;
 		List<EchartsData> echartsDataList = new ArrayList<EchartsData>();
 		for (int i = 1; i <= 12; i++) {
 			EchartsData echartsData = new EchartsData();
-			startDate = "2019-"+i+"-01";
+			startDate = "2023-"+i+"-01";
 			if (i==12) {
 				endDate = "2024-"+i+"-31";
 			}else {
@@ -65,17 +65,17 @@ public class EchartsDataDaoTest extends BaseTest{
 	
 	@Test
 	public void testC() {
-		String startDate = "2019-04-01";
-		String endDate = "2019-05-01";
+		String startDate = "2023-04-01";
+		String endDate = "2024-05-01";
 		List<SaleOrder> saleOrderList = null;
 		List<EchartsData> echartsDataList = new ArrayList<EchartsData>();
 		for (int i = 1; i <= 12; i++) {
 			EchartsData echartsData = new EchartsData();
-			startDate = "2019-"+i+"-01";
+			startDate = "2023-"+i+"-01";
 			if (i==12) {
-				endDate = "2019-"+i+"-31";
+				endDate = "2023-"+i+"-31";
 			}else {
-				endDate = "2019-"+(i+1)+"-01";
+				endDate = "2023-"+(i+1)+"-01";
 			}	
 			saleOrderList = echartsDataDao.querySaleOrderListByDate(startDate, endDate);
 			

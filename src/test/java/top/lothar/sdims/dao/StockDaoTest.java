@@ -36,9 +36,9 @@ public class StockDaoTest extends BaseTest{
 	public void testBQueryStockList() {
 		Stock stockConditon = new Stock();
 		Goods goods = new Goods();
-		goods.setName("烤漆防盗门");
+		goods.setName("汽油发电机");
 		Repository repository = new Repository();
-		repository.setName("平顶山仓库");
+		repository.setName("沈水");
 //		stockConditon.setGoods(goods);
 		stockConditon.setRepository(repository);
 		List<Stock> queryStockList = stockDao.queryStockList(stockConditon,0,5);
@@ -51,9 +51,9 @@ public class StockDaoTest extends BaseTest{
 	public void testCQueryStockCount() {
 		Stock stockConditon = new Stock();
 		Goods goods = new Goods();
-		goods.setName("烤漆防盗门");
+		goods.setName("汽油发电机");
 		Repository repository = new Repository();
-		repository.setName("洛阳洛龙区");
+		repository.setName("大连");
 //		stockConditon.setGoods(goods);
 		stockConditon.setRepository(repository);
 		int queryStockCount = stockDao.queryStockCount(stockConditon);
@@ -85,8 +85,8 @@ public class StockDaoTest extends BaseTest{
 	
 	@Test
 	public void test() {
-		String goodsName = "智能防盗门";
-		String repositoryName = "洛阳市仓库";
+		String goodsName = "汽油发电机";
+		String repositoryName = "沈水";
 		Stock a = stockDao.queryStockByGoodsNameAndRepositoryName(goodsName, repositoryName);
 //		System.out.println(a.getStockId());
 //		System.out.println(a.getGoods().getName());
